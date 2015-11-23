@@ -5,7 +5,7 @@ WINDOWWIDTH = 588
 WINDOWHEIGHT = 424
 TEXTCOLOR = (255, 255, 255)
 BACKGROUNDCOLOR = (0, 0, 0)
-BACKGROUNDIMAGE = pygame.image.load("gamefloor.png")
+BACKGROUNDIMAGE = pygame.image.load("assets/gamefloor.png")
 FPS = 40
 BADDIEMINSIZE = 10
 BADDIEMAXSIZE = 40
@@ -50,17 +50,17 @@ pygame.mouse.set_visible(False)
 
 # set up fonts
 #font = pygame.font.SysFont(None, 48)
-font = pygame.font.Font("freesansbold.ttf",16)
+font = pygame.font.Font("assets/freesansbold.ttf",16)
 
 # set up sounds
-gameOverSound = pygame.mixer.Sound('gameover.wav')
-pygame.mixer.music.load('background.wav')
+gameOverSound = pygame.mixer.Sound('assets/gameover.wav')
+pygame.mixer.music.load('assets/background.wav')
 
 # set up images
-playerImage = pygame.image.load('player.png')
+playerImage = pygame.image.load('assets/player.png')
 playerImagebuffer = playerImage
 playerRect = playerImage.get_rect()
-baddieImage = pygame.image.load('duck.png')
+baddieImage = pygame.image.load('assets/duck.png')
 
 # show the "Start" screen
 drawText('Kinemagic', font, windowSurface, (WINDOWWIDTH / 3), (WINDOWHEIGHT / 3))
@@ -100,25 +100,25 @@ while True:
                     moveRight = False
                     moveLeft = True
                     playerImagebuffer = playerImage
-                    playerImage = pygame.image.load('playerLeft.png')
+                    playerImage = pygame.image.load('assets/playerLeft.png')
 
                 if event.key == K_RIGHT or event.key == ord('d'):
                     moveLeft = False
                     moveRight = True
                     playerImagebuffer = playerImage
-                    playerImage = pygame.image.load('player.png')
+                    playerImage = pygame.image.load('assets/player.png')
 
                 if event.key == K_UP or event.key == ord('w'):
                     moveDown = False
                     moveUp = True
                     playerImagebuffer = playerImage
-                    playerImage = pygame.image.load('playerTurned.png')
+                    playerImage = pygame.image.load('assets/playerTurned.png')
 
                 if event.key == K_DOWN or event.key == ord('s'):
                     moveUp = False
                     moveDown = True
                     playerImagebuffer = playerImage
-                    playerImage = pygame.image.load('playerFacing.png')
+                    playerImage = pygame.image.load('assets/playerFacing.png')
 
 
             if event.type == KEYUP:
@@ -222,7 +222,7 @@ while True:
     pygame.mixer.music.stop()
     gameOverSound.play()
 
-    drawText('Death by Gravity.', font, windowSurface, (WINDOWWIDTH / 3), (WINDOWHEIGHT / 3))
+    drawText('Death by Force of Duck.', font, windowSurface, (WINDOWWIDTH / 3), (WINDOWHEIGHT / 3))
     drawText('Press a key to play again.', font, windowSurface, (WINDOWWIDTH / 3) - 80, (WINDOWHEIGHT / 3) + 50)
     pygame.display.update()
     waitForPlayerToPressKey()
