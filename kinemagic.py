@@ -1,5 +1,6 @@
 import pygame, random, sys
 from pygame.locals import *
+import pygame.mixer
 
 WINDOWWIDTH = 1022
 WINDOWHEIGHT = 273
