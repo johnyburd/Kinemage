@@ -1,11 +1,11 @@
 import pygame, random, sys
 from pygame.locals import *
 
-WINDOWWIDTH = 1022
-WINDOWHEIGHT = 273
+WINDOWWIDTH = 588
+WINDOWHEIGHT = 424
 TEXTCOLOR = (255, 255, 255)
 BACKGROUNDCOLOR = (0, 0, 0)
-BACKGROUNDIMAGE = pygame.image.load("background.png")
+BACKGROUNDIMAGE = pygame.image.load("gamefloor.png")
 FPS = 40
 BADDIEMINSIZE = 10
 BADDIEMAXSIZE = 40
@@ -49,7 +49,8 @@ pygame.display.set_caption('Kinemagic')
 pygame.mouse.set_visible(False)
 
 # set up fonts
-font = pygame.font.SysFont(None, 48)
+#font = pygame.font.SysFont(None, 48)
+font = pygame.font.Font("freesansbold.ttf",16)
 
 # set up sounds
 gameOverSound = pygame.mixer.Sound('gameover.wav')
@@ -147,9 +148,9 @@ while True:
 #            if not moveUp ^ moveDown ^ moveRight ^ moveLeft:
                # playerImage = playerImagebuffer
 
-            if event.type == MOUSEMOTION:
+            #if event.type == MOUSEMOTION:
                 # If the mouse moves, move the player where the cursor is.
-                playerRect.move_ip(event.pos[0] - playerRect.centerx, event.pos[1] - playerRect.centery)
+                #playerRect.move_ip(event.pos[0] - playerRect.centerx, event.pos[1] - playerRect.centery)
 
         # Add new baddies at the top of the screen, if needed.
         if not reverseCheat and not slowCheat:
