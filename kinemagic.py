@@ -1,17 +1,17 @@
 import pygame, random, sys
 from pygame.locals import *
 
-WINDOWWIDTH = 588
-WINDOWHEIGHT = 424
+WINDOWWIDTH = 1022
+WINDOWHEIGHT = 273
 TEXTCOLOR = (255, 255, 255)
 BACKGROUNDCOLOR = (0, 0, 0)
-BACKGROUNDIMAGE = pygame.image.load("assets/gamefloor.png")
+BACKGROUNDIMAGE = pygame.image.load("assets/background.png")
 FPS = 40
 BADDIEMINSIZE = 10
 BADDIEMAXSIZE = 40
 BADDIEMINSPEED = 1
 BADDIEMAXSPEED = 6
-ADDNEWBADDIERATE = 59#6
+ADDNEWBADDIERATE = 20#96
 PLAYERMOVERATE = 5
 
 
