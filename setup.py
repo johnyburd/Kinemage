@@ -65,7 +65,7 @@ class BuildExe:
         self.project_description = "A game about the adventures of Kai the Kenemage."
  
         #Icon file (None will use pygame default icon)
-        self.icon_file = "icon.ico"
+        self.icon_file = "assets/icon.ico"
  
         #Extra files/dirs copied to game
         self.extra_datas = []

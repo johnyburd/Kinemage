@@ -1,0 +1,3 @@
+Traceback (most recent call last):
+  File "Kinemagic.py", line 9, in <module>
+pygame.error: Couldn't open assets/background.png
